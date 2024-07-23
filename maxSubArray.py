@@ -1,14 +1,14 @@
 class Solution:
     def maxSubArray(self, nums: list[int]) -> int:
         if not nums:
-            return 0
-        total_max=nums[0]
-        current_total=nums[0]
-        
+            return
+        current_profit=nums[0]
+        max_profit=nums[0]
         for i in nums[1:]:
-            current_total=max(i, i+current_total)
-            total_max=max(total_max,current_total)
-        return total_max
+            current_profit=max(i, current_profit+i)
+            max_profit=max(max_profit, current_profit)
+        return max_profit
+        
         
         
         
@@ -18,5 +18,5 @@ class Solution:
         
         
     
-print(Solution().maxSubArray(nums=[-2,1,-3,4,-1,2,1,-5,4]))
+print(Solution().maxSubArray(nums=[1,2,3,-10,2,6]))
         
