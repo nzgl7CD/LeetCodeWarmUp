@@ -16,5 +16,18 @@ def indexArray():
     list[2]=4 #change existing element in index 2 with 4
     list.insert(0,10) #puts 10 in index 0
     list.append(2) #puts new element in the back of the stack
+    list.insert(0,list.pop(list.index(2)))
+    
     print(list)
-indexArray()
+# print(anyStream(list))
+
+def splitStrings(string1:str):
+    stringList=[i for i in string1]
+    stringList.append("")
+    for i in range(len(stringList)-1):
+        
+        stringList.insert(i+1,stringList[i])
+    
+    return stringList
+
+print(splitStrings("test"))
