@@ -9,4 +9,4 @@ class Solution:
     return []
   
 object=Solution()
-print(object.twoSum([1,2,3,4,5], 7))        
+print(object.twoSum([1,2,3,4,5], 7))
